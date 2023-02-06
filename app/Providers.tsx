@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import { ThemeProvider } from "next-themes";
 
 function Providers({
     children,
@@ -6,9 +7,12 @@ function Providers({
         children: React.ReactNode
     }) {
     return (
-        <div>
+        <ThemeProvider
+            attribute="class"
+            enableSystem={true}
+        >
             {children}
-        </div>
+        </ThemeProvider>
     )
 }
 
